@@ -15,6 +15,7 @@ const Home = () => {
     const handleAddToCart = (tShirt) => {
         // console.log(tShirt); 
         const exist = cart.find(ts => ts._id === tShirt._id);
+        
         if (exist) {
             toast('You have already added this item.')
         } else {

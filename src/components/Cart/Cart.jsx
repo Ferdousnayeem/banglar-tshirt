@@ -7,7 +7,7 @@ const Cart = ({cart, handleRemoveFromCart}) => {
     if (cart.length === 0) {
         message = <p>Please add some products.</p>
     } else {
-        message = <p>Boroloxxxxx!! thanks for placing orders</p>
+        message = <p>Now you seems Boroloxxxxx!!</p>
     }
 
     return (
@@ -16,23 +16,23 @@ const Cart = ({cart, handleRemoveFromCart}) => {
 
             <p className={`bold bordered ${cart.length === 3 ? 'yellow' : 'purple'}`}>Something</p>
 
-            {cart.length > 2 ? <span>Aro kino</span> : <span>fokira</span> }
-
             {message}
 
-            {
-                cart.length === 2 && <p>Double Bonanza!!!</p>
-            }
-
-            {
-                cart.length === 3 || <p>tinta to hoilo na</p>
-            }
-            
             {
                 cart.map(tshirt => <p 
                     key={tshirt._id}>{tshirt.name}
                     <button onClick={()=>handleRemoveFromCart(tshirt._id)}>x</button>
                     </p>)
+            }
+            
+            {cart.length > 2 ? <span>Aro kino</span> : <span>fokira</span> }
+            
+            {
+                cart.length === 2 && <p>Double Bonanza!!!</p>
+            }
+            
+            {
+                cart.length === 3 || <p>tinta to hoilo na</p>
             }
 
         </div>
@@ -53,5 +53,5 @@ nts
  /* 
  CONDITIONAL CSS CLASS
  * 1. use ternary
- * 2. ternery inside templage
+ * 2. ternery inside template string
  */
