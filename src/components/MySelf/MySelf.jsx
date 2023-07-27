@@ -1,11 +1,11 @@
 import React from 'react';
 import Special from '../Special/Special';
 
-const MySelf = () => {
+const MySelf = ({gift}) => {
     return (
         <div>
             <h4>Myself</h4>
-            <Special></Special>
+            <Special gift={gift}></Special>
         </div>
     );
 };
